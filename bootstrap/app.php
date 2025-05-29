@@ -52,16 +52,4 @@ $app->singleton(
 |
 */
 
-$app = require_once __DIR__.'/bootstrap/app.php';
-
-// PORT değişkenini oku ve 8000'i fallback olarak kullan
-$port = $_ENV['PORT'] ?? 8000;
-
-// Uygulamayı belirlenen port ile başlat
-$app->run(
-    $request = Illuminate\Http\Request::capture(),
-    $port // Port parametresini iletiyoruz
-);
-
-
 return $app;
